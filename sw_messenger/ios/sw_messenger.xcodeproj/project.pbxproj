@@ -12,6 +12,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C6E8F06254634B3C82A19C55 /* HKGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87580ABF85114E6B8737C788 /* HKGrotesk-Bold.ttf */; };
+		82EDB5C66CF341BA8B4D7490 /* HKGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9B688F4461A4028980B2CA7 /* HKGrotesk-Medium.ttf */; };
+		956DCB53BE854A958715DEEB /* HKGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 967521FCF8584DBCA35E94D3 /* HKGrotesk-Regular.ttf */; };
+		F04EC62E42F54FFF866C3D82 /* HKGrotesk-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 448FEE6F26814CEA81354D6F /* HKGrotesk-SemiBold.ttf */; };
+		759B43A0A4E4445AAF8D8D26 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A9358E1083E4829A97FCCEE /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = sw_messenger/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = sw_messenger/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		87580ABF85114E6B8737C788 /* HKGrotesk-Bold.ttf */ = {isa = PBXFileReference; name = "HKGrotesk-Bold.ttf"; path = "../assets/fonts/HKGrotesk-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9B688F4461A4028980B2CA7 /* HKGrotesk-Medium.ttf */ = {isa = PBXFileReference; name = "HKGrotesk-Medium.ttf"; path = "../assets/fonts/HKGrotesk-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		967521FCF8584DBCA35E94D3 /* HKGrotesk-Regular.ttf */ = {isa = PBXFileReference; name = "HKGrotesk-Regular.ttf"; path = "../assets/fonts/HKGrotesk-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		448FEE6F26814CEA81354D6F /* HKGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; name = "HKGrotesk-SemiBold.ttf"; path = "../assets/fonts/HKGrotesk-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3A9358E1083E4829A97FCCEE /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 				00E356EF1AD99517003FC87E /* sw_messengerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				225346DFF07342E7B180FFB8 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -123,6 +134,19 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		225346DFF07342E7B180FFB8 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				87580ABF85114E6B8737C788 /* HKGrotesk-Bold.ttf */,
+				D9B688F4461A4028980B2CA7 /* HKGrotesk-Medium.ttf */,
+				967521FCF8584DBCA35E94D3 /* HKGrotesk-Regular.ttf */,
+				448FEE6F26814CEA81354D6F /* HKGrotesk-SemiBold.ttf */,
+				3A9358E1083E4829A97FCCEE /* icomoon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -214,6 +238,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C6E8F06254634B3C82A19C55 /* HKGrotesk-Bold.ttf in Resources */,
+				82EDB5C66CF341BA8B4D7490 /* HKGrotesk-Medium.ttf in Resources */,
+				956DCB53BE854A958715DEEB /* HKGrotesk-Regular.ttf in Resources */,
+				F04EC62E42F54FFF866C3D82 /* HKGrotesk-SemiBold.ttf in Resources */,
+				759B43A0A4E4445AAF8D8D26 /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
