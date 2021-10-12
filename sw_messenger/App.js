@@ -1,25 +1,6 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
-import {Profile} from './components/Profile'
+import {Profile} from './src/screens/Profile';
 
-
-export default function App () {
-  
-  return (
-    <Profile/>
-  )
+export default function App() {
+  return <Profile />;
 }
-
-const styles = StyleSheet.create({
-
-});
-
-
