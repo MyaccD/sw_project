@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
-import {Header} from '../components/ui-kit/Header/Header';
-import {CountsModule} from '../components/CountsModule/CountsModule';
-import {PhotoGrid} from '../components/PhotoGrid/PhotoGrid';
+import {Header} from '../../components/ui-kit/Header/Header';
+import {CountsModule} from '../../components/CountsModule/CountsModule';
+import {PhotoGrid} from '../../components/PhotoGrid/PhotoGrid';
 import styles from './ProfileStyle';
 
 export const Profile = () => {
@@ -10,7 +10,7 @@ export const Profile = () => {
     <View style={styles.container}>
       <Header />
       <View style={styles.avatar}>
-        <Image source={require('../assets/images/Avatar.png')} />
+        <Image source={require('../../assets/images/Avatar.png')} />
       </View>
       <View style={styles.name}>
         <Text style={styles.textName}>Kat Williams</Text>

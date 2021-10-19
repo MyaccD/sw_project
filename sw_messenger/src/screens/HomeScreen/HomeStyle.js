@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-const HeaderStyle = StyleSheet.create({
+const HomeStyle = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
@@ -12,10 +12,11 @@ const HeaderStyle = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
-
-  iconDots: {
-    transform: [{rotate: '90deg'}],
+  iconRigth: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: 59,
   },
 });
 
-export default HeaderStyle;
+export default HomeStyle;
