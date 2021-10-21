@@ -1,25 +1,25 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {Home} from '../screens/HomeScreen/Home';
-import {Profile} from '../screens/ProfileScreen/Profile';
-import {Friends} from '../screens/FriendsScreen/Friends';
-import {Search} from '../screens/SearchScreen/Search';
-import {Settings} from '../screens/SettingsScreen/Settings';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Settings from '../screens/SettingsScreen';
+import Profile from '../screens/ProfileScreen/index';
+import Friends from '../screens/FriendsScreen';
+import Search from '../screens/SearchScreen';
+import Home from '../screens/HomeScreen';
 
-export const Navigator = () => {
-  const Stack = createStackNavigator();
+const MainStackNavigator = createNativeStackNavigator();
 
+export const StackNavigator = () => {
   return (
-    <Stack.Navigator
+    <MainStackNavigator.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
-      }}
-      initialRouteName="App">
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Friends" component={Friends} />
-      <Stack.Screen name="Search" component={Search} />
-      <Stack.Screen name="Settings" component={Settings} />
-    </Stack.Navigator>
+      }}>
+      <MainStackNavigator.Screen name="Home" component={Home} />
+      <MainStackNavigator.Screen name="Profile" component={Profile} />
+      <MainStackNavigator.Screen name="Friends" component={Friends} />
+      <MainStackNavigator.Screen name="Search" component={Search} />
+      <MainStackNavigator.Screen name="Settings" component={Settings} />
+    </MainStackNavigator.Navigator>
   );
 };
