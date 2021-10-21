@@ -1,15 +1,10 @@
-import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, View, StatusBar, TouchableOpacity} from 'react-native';
 import Icon from '../../assets/Icon/Icon';
 import styles from './HomeStyle';
-
-export const Home = () => {
-  const navigation = useNavigation();
-
-  const handleNavigateToScreen = () => {
-    navigation.navigate('Profile');
-  };
+import Menu from '../../components/HomeMenu';
+export const Home = props => {
+  const [menu, setMenu] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -17,7 +12,7 @@ export const Home = () => {
         <StatusBar backgroundColor="#2B2146" />
 
         <View>
-          <TouchableOpacity onPress={() => handleNavigateToScreen()}>
+          <TouchableOpacity onPress={() => setMenu(true)}>
             <Icon name="menu" size={24} color="#FFFFFF" />
           </TouchableOpacity>
         </View>
@@ -32,6 +27,13 @@ export const Home = () => {
           </TouchableOpacity>
         </View>
       </View>
+
+      <Menu
+        visible={menu}
+        onCancel={() => setMenu(false)}
+        navigation={props.navigation}
+        selfInf={props.selfInf}
+      />
     </SafeAreaView>
   );
 };
