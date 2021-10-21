@@ -1,3 +1,10 @@
 import Header from './Header';
+import {connect} from 'react-redux';
 
-export default Header;
+const mapStateToProps = state => ({
+  data: state,
+});
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,3 +1,10 @@
-import CountsModule from './CountsModule';
+import {CountsModule} from './CountsModule';
+import {connect} from 'react-redux';
 
-export default CountsModule;
+const mapStateToProps = state => ({
+  data: state,
+});
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CountsModule);

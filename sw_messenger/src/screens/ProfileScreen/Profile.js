@@ -1,24 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, View, Image} from 'react-native';
 import {Header} from '../../components/ui-kit/Header/Header';
 import {CountsModule} from '../../components/CountsModule/CountsModule';
 import {PhotoGrid} from '../../components/PhotoGrid/PhotoGrid';
 import styles from './ProfileStyle';
 
-export const Profile = () => {
+export const Profile = props => {
+  const data = props.data;
+
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.avatar}>
-        <Image source={require('../../assets/images/Avatar.png')} />
+        <Image source={data.selfInf.profilePhoto} />
       </View>
       <View style={styles.name}>
-        <Text style={styles.textName}>Kat Williams</Text>
-        <Text style={styles.textSurname}>@Williams</Text>
+        <Text style={styles.textName}>{data.selfInf.name}</Text>
+        <Text style={styles.textSurname}>{data.selfInf.link}</Text>
       </View>
       <View style={styles.locate}>
-        <Text style={styles.textCountry}>Россия, Санкт-Петербург</Text>
-        <Text style={styles.textWork}>Место работы: Artist by Passion!</Text>
+        <Text style={styles.textCountry}>
+          {data.selfInf.country}, {data.selfInf.city}
+        </Text>
+        <Text style={styles.textWork}>
+          Место работы: {data.selfInf.workplace}
+        </Text>
       </View>
       <CountsModule />
 
@@ -33,3 +39,5 @@ export const Profile = () => {
     </View>
   );
 };
+
+export default Profile;
