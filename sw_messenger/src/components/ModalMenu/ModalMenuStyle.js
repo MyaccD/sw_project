@@ -1,19 +1,24 @@
 import {StyleSheet} from 'react-native';
 
 const ModalMenu = StyleSheet.create({
-  card: {
+  wrapper: {
+    flex: 1,
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+  },
+  container: {
+    width: '100%',
+  },
+
+  backgroundCard: {
+    backgroundColor: '#2B2146',
+    paddingHorizontal: 16,
   },
 
   string: {
-    width: 339,
     flexDirection: 'row',
-    marginTop: 13,
-    marginBottom: 14,
-    height: 24,
-    flex: 1,
-    alignItems: 'center',
+    paddingVertical: 16,
   },
 
   text: {
@@ -29,19 +34,24 @@ const ModalMenu = StyleSheet.create({
     height: 1,
   },
 
-  backgroundOutside: {
-    flex: 1,
-    backgroundColor: '#000000AA',
-    justifyContent: 'flex-end',
-  },
-
-  backgroundCard: {
-    backgroundColor: '#2B2146',
-    width: '100%',
-  },
-
   btn: {
     marginTop: 10,
+    backgroundColor: '#2B2146',
+    borderRadius: 15,
+    marginTop: 10,
+    paddingVertical: 17,
+  },
+
+  btnText: {
+    fontFamily: 'HKGrotesk-Bold',
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#FFFFFF',
+  },
+
+  press: {
+    height: '80%',
+    width: '100%',
   },
 });
 

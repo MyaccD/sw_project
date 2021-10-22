@@ -1,3 +1,3 @@
-import ModalMoreDetails from './ModalMoreDetails';
+import MoreDetails from './ModalMoreDetails';
 
-export default ModalMoreDetails;
+export default MoreDetails;

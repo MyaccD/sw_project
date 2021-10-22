@@ -2,9 +2,7 @@ import {Home} from './Home';
 import {connect} from 'react-redux';
 
 const mapStateToProps = state => ({
-  data: state,
+  selfInf: state.selfInf,
 });
 
-const mapDispatchToProps = dispatch => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps)(Home);

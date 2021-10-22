@@ -47,6 +47,46 @@ const ProfileStyle = StyleSheet.create({
     fontSize: 14,
     color: '#ECEBED',
   },
+  countsModule: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  numberFollowers: {
+    fontFamily: 'HKGrotesk-Bold',
+    fontSize: 14,
+    color: '#FFFFFF',
+  },
+
+  textFollower: {
+    fontFamily: 'HKGrotesk-Bold',
+    fontSize: 14,
+    color: '#8672BB',
+  },
+
+  followers: {
+    flexDirection: 'column',
+    marginTop: 24,
+  },
+
+  following: {
+    flexDirection: 'column',
+    marginLeft: 30,
+    marginTop: 24,
+  },
+
+  numberFollowing: {
+    fontFamily: 'HKGrotesk-Bold',
+    fontSize: 14,
+    color: '#FFFFFF',
+  },
+
+  textFollowing: {
+    fontFamily: 'HKGrotesk-Bold',
+    fontSize: 14,
+    color: '#8672BB',
+  },
 
   divider: {
     borderBottomWidth: 1,
@@ -56,9 +96,17 @@ const ProfileStyle = StyleSheet.create({
     marginLeft: 20,
   },
 
+  photo: {
+    flex: 10,
+    flexDirection: 'column',
+
+    paddingHorizontal: 16,
+  },
+
   labelPhoto: {
     flexDirection: 'row',
     marginTop: 20,
+    marginBottom: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -74,6 +122,11 @@ const ProfileStyle = StyleSheet.create({
     marginLeft: 6,
     fontSize: 14,
     color: '#8672BB',
+  },
+  footer: {
+    width: '100%',
+    height: 45,
+    backgroundColor: '#201736',
   },
 });
 

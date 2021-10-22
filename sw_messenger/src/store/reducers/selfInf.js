@@ -10,9 +10,6 @@ const initialState = {
   studies: 'ВГУЮ в г. Санкт-Петербург',
 };
 
-export function selfInfReducer(state = initialState, action) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export function selfInfReducer(state = initialState) {
+  return state;
 }

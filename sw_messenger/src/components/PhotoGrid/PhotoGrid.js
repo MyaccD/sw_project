@@ -1,54 +1,30 @@
-import React from 'react';
-import {View, Image} from 'react-native';
-import styles from './PhotoGridStyle';
+import React, {useState} from 'react';
+import {View, Image, FlatList, TouchableOpacity} from 'react-native';
+import {styles} from './PhotoGridStyle';
 
-export const PhotoGrid = () => {
+const Item = ({item, onPress}) => (
+  <TouchableOpacity onPress={onPress} style={{}}>
+    <Image style={styles.title} source={item.source} />
+  </TouchableOpacity>
+);
+
+export const PhotoGrid = ({data}) => {
+  const [selectedId, setSelectedId] = useState(null);
+
+  const renderItem = ({item}) => {
+    return <Item item={item} onPress={() => setSelectedId(item.id)} />;
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.containerOne}>
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo1.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo4.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo7.jpg')}
-        />
-      </View>
-
-      <View style={styles.containerTwo}>
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo2.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo5.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo8.jpg')}
-        />
-      </View>
-
-      <View style={styles.containerThree}>
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo3.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo6.jpg')}
-        />
-        <Image
-          style={styles.tinyPhoto}
-          source={require('../../assets/images/Photo9.jpg')}
-        />
-      </View>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        extraData={selectedId}
+        numColumns={3}
+        columnWrapperStyle={styles.columnWrapperStyle}
+      />
     </View>
   );
 };

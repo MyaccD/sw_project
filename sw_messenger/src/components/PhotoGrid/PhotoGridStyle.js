@@ -1,17 +1,16 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
-const PhotoGridStyle = StyleSheet.create({
-  container: {
-    marginTop: 5,
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  tinyPhoto: {
-    marginLeft: 3,
+export const styles = StyleSheet.create({
+  container: {},
+
+  title: {
     marginTop: 3,
-    width: 113,
-    height: 113,
+    width: (Dimensions.get('window').width - 38) / 3,
+    height: (Dimensions.get('window').width - 38) / 3,
+    aspectRatio: 1,
+    resizeMode: 'contain',
+  },
+  columnWrapperStyle: {
+    justifyContent: 'space-between',
   },
 });
-
-export default PhotoGridStyle;

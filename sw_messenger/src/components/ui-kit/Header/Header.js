@@ -1,37 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Icon from '../../../assets/Icon/Icon';
 import {SafeAreaView, View, StatusBar, TouchableOpacity} from 'react-native';
-
 import styles from './HeaderStyle';
 import {ModalMenu} from '../../ModalMenu/ModalMenu';
 import {useNavigation} from '@react-navigation/native';
 
-const popuplist = [
-  {
-    id: 1,
-    icon: 'share',
-    name: 'Поделиться',
-  },
-  {
-    id: 2,
-    icon: 'document-duplicate',
-    name: 'Скопировать ссылку',
-  },
-];
-
 export const Header = () => {
-  let popupRef = React.createRef();
-
-  const onShowPopup = () => {
-    popupRef.show();
-  };
-
-  const onClosePopup = () => {
-    popupRef.close();
-  };
-
+  const [modalMenu, setModalMenu] = useState(false);
   const navigation = useNavigation();
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -44,7 +20,7 @@ export const Header = () => {
         </View>
 
         <SafeAreaView style={styles.button}>
-          <TouchableOpacity onPress={onShowPopup}>
+          <TouchableOpacity onPress={() => setModalMenu(true)}>
             <Icon
               style={styles.iconDots}
               name="Dots_Vertical"
@@ -52,11 +28,7 @@ export const Header = () => {
               color="#FFFFFF"
             />
           </TouchableOpacity>
-          <ModalMenu
-            ref={target => (popupRef = target)}
-            onTouchOutside={onClosePopup}
-            data={popuplist}
-          />
+          <ModalMenu visible={modalMenu} onCancel={() => setModalMenu(false)} />
         </SafeAreaView>
       </View>
     </SafeAreaView>
