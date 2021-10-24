@@ -39,7 +39,12 @@ export const Menu = ({visible, onCancel, navigation, selfInf}) => {
               </TouchableOpacity>
             </View>
             <View style={styles.item}>
-              <TouchableOpacity style={styles.touchBtn}>
+              <TouchableOpacity
+                style={styles.touchBtn}
+                onPress={() => {
+                  onCancel();
+                  navigation.navigate('Friends');
+                }}>
                 <Icon name="group" size={24} color="#FFFFFF" />
                 <Text style={styles.text}>Друзья</Text>
               </TouchableOpacity>

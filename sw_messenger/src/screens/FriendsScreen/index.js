@@ -1,3 +1,8 @@
 import {Friends} from './Friends';
+import {connect} from 'react-redux';
 
-export default Friends;
+const mapStateToProps = state => ({
+  friends: state.friends,
+});
+
+export default connect(mapStateToProps)(Friends);
